@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html ng-app="myApp">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="analyze.png">
 <title>Analisa Gambar</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <style>
     .ng-cloak { display: none !important; }
     a img {
@@ -15,6 +16,9 @@
     }
     	.image-modal img {
     width: 100%;
+    }
+    .background{
+        background-color: #8b9dc3;
     }
 </style>
 </head>
@@ -31,7 +35,7 @@
         <div class="col-md-7">
             <div class="form-group">
             <label for="imageFile">Pilih gambar untuk dianalisa:</label>
-            <input type="file" id="imageFile" name="imageFile" on-file-selected="ctrl.imageFileSelected(file)">
+            <input type="file" id="imageFile" class="btn btn-success" name="imageFile" on-file-selected="ctrl.imageFileSelected(file)">
             </div>
         </div>
         <div class="col-md-5">
@@ -40,7 +44,7 @@
             <div class="input-group">
                 <input type="text" id="searchText" ng-model="ctrl.searchText" class="form-control">
                 <span class="input-group-btn">
-                <button class="btn btn-default" type="button" ng-click="ctrl.clearSearchText()">
+                <button class="btn btn-danger" type="button" ng-click="ctrl.clearSearchText()">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                 </button>
                 </span>
@@ -87,9 +91,10 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
 <script src="index.js"></script>
 
 </body>
